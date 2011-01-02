@@ -1,4 +1,4 @@
-DESCRIPTION=""
+DESCRIPTION="A Parser Generator for Python (w/mxTextTools derivative)"
 HOMEPAGE="http://simpleparse.sourceforge.net/"
 SRC_URI="http://downloads.sourceforge.net/project/simpleparse/simpleparse/2.1.1a2/SimpleParse-2.1.1a2.tar.gz"
 REVISION="1"
