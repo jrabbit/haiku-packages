@@ -11,7 +11,7 @@ BUILD {
 }
 INSTALL {
         cd setuptools-0.6c11
-        python setup.py install --root=${DESTDIR}
+        python setup.py install
 
 }
 LICENSE="Python"
