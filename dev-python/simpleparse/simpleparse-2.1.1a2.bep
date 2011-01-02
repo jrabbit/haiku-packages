@@ -11,8 +11,8 @@ BUILD {
 }
 INSTALL {
         cd SimpleParse-2.1.1a2
-        python setup.py install --root=${DESTDIR}
+        python setup.py install
 
 }
-LICENSE="BSD derived, eGenix.com Public License"
+LICENSE="simpleparse"
 COPYRIGHT="1998-2006, Mike C. Fletcher"
