@@ -14,5 +14,5 @@ INSTALL {
         python setup.py install --root=${DESTDIR}
 
 }
-LICENSE="PSF"
+LICENSE="Python"
 COPYRIGHT="2009 Phillip J. Eby"
