@@ -1,0 +1,19 @@
+DESCRIPTION="Archive files using LZSS and Huffman compression (.lzh files)" 
+HOMEPAGE="http://sourceforge.jp/projects/lha/" 
+SRC_URI="http://jaist.dl.sourceforge.jp/lha/22231/lha-1.14i-ac20050924p1.tar.gz"
+REVISION="1"
+STATUS_HAIKU="stable"
+DEPEND=""
+BUILD {
+	cd lha-1.14i-ac20050924p1
+	autoreconf -vfi
+	./configure --prefix=/boot/common/
+	make	
+}
+
+INSTALL {
+	cd lha-1.14i-ac20050924p1
+	make install	
+}
+LICENSE="lha"
+COPYRIGHT="1991-2000, Too many"

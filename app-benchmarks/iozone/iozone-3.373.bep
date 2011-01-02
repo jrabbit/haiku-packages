@@ -1,0 +1,19 @@
+DESCRIPTION="Filesystem benchmarking program" 
+HOMEPAGE="http://www.iozone.org/" 
+SRC_URI="http://www.iozone.org/src/current/iozone3_373.tar"
+CHECKSUM_MD5="6ce0277d3d1769f38040b84853a3472c"
+REVISION="1"
+STATUS_HAIKU="unstable"
+DEPEND=""
+BUILD {
+	cd iozone3_373/src/current/
+	make haiku
+}
+
+INSTALL {
+	cd iozone3_373/src/current/
+	install -v iozone /boot/common/bin
+	install -v fileop /boot/common/bin
+}
+LICENSE="iozone"
+COPYRIGHT="1991-2001, William D. Norcott; 2010, Don Capps"
