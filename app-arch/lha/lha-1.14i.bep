@@ -16,4 +16,4 @@ INSTALL {
 	make install	
 }
 LICENSE="lha"
-COPYRIGHT="1991-2000, Too many"
+COPYRIGHT="1991, Masaru Oki; 1993-1995, Nobutaka Watazaki; 2000, Tsugio Okamoto et al."
