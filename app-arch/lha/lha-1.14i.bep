@@ -13,7 +13,7 @@ BUILD {
 
 INSTALL {
 	cd lha-1.14i-ac20050924p1
-	make install	
+	make install DESTDIR=${DESTDIR}
 }
 LICENSE="lha"
 COPYRIGHT="1991, Masaru Oki; 1993-1995, Nobutaka Watazaki; 2000, Tsugio Okamoto et al."

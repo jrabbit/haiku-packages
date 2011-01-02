@@ -9,7 +9,7 @@ BUILD {
 }
 
 INSTALL {
-	cp ha /boot/common/bin/	
+	make install DESTDIR=${DESTDIR}
 }
 LICENSE="GNU GPL v2"
 COPYRIGHT="1993-1995 Harri Hirvola"

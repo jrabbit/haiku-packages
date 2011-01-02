@@ -12,7 +12,7 @@ BUILD {
 }
 INSTALL {
         cd bonnie++-1.03e
-        make install
+        make install DESTDIR=${DESTDIR}
 
 }
 LICENSE="GNU GPL v2"
