@@ -1,7 +1,8 @@
 DESCRIPTION="The HA archiver using the HSC compression method" 
 HOMEPAGE="http://packages.debian.org/squeeze/ha" 
-SRC_URI="ftp://sunsite.unc.edu/pub/Linux/utils/compress/ha0999p-linux.tar.gz"
+SRC_URI="ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/ha0999.tgz"
 REVISION="1"
+CHECKSUM_MD5="77f3266a451712bec55d60df67f61486"
 STATUS_HAIKU="unstable"
 DEPEND=""
 BUILD {
