@@ -3,7 +3,7 @@ HOMEPAGE="http://packages.debian.org/squeeze/ha"
 SRC_URI="ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/ha0999.tgz"
 REVISION="1"
 CHECKSUM_MD5="77f3266a451712bec55d60df67f61486"
-STATUS_HAIKU="unstable"
+STATUS_HAIKU="stable"
 DEPEND=""
 BUILD {
 	make -f makefile.nix
