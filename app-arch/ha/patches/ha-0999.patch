@@ -1,6 +1,6 @@
 diff -Naur nix.orig/machine.c nix/machine.c
---- nix.orig/machine.c	2009-11-24 15:27:43.000000000 +0000
-+++ nix/machine.c	2009-11-24 15:23:26.000000000 +0000
+--- machine.c	2009-11-24 15:27:43.000000000 +0000
++++ machine.c	2009-11-24 15:23:26.000000000 +0000
 @@ -22,6 +22,7 @@
  #include <stdlib.h>
  #include <ctype.h>
