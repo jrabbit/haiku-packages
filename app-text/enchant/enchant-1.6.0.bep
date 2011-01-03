@@ -3,7 +3,7 @@ HOMEPAGE="http://abisource.com/projects/enchant/"
 SRC_URI="http://www.abisource.com/downloads/enchant/1.6.0/enchant-1.6.0.tar.gz"
 REVISION= "1"
 STATUS_HAIKU="stable"
-DEPEND="dev-util/pkgconfig >= 0.23"
+DEPEND="dev-util/pkgconfig >= 0.23, sys-devel/gettext >= 0.17 , dev-lib/glib >= 2.24.2"
 CHECKSUM_MD5="de11011aff801dc61042828041fb59c7"
 BUILD {
         cd enchant-1.6.0
