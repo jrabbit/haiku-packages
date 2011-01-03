@@ -1,6 +1,6 @@
-diff -Naur iozone3_326/src/current/fileop.c iozone3_326.haiku/src/current/fileop.c
---- iozone3_326/src/current/fileop.c	2009-06-19 14:00:44.000000000 +0000
-+++ iozone3_326.haiku/src/current/fileop.c	2009-12-02 04:12:20.000000000 +0000
+diff -Naur iozone3_373/src/current/fileop.c iozone3_373.haiku/src/current/fileop.c
+--- iozone3_373/src/current/fileop.c	2009-06-19 14:00:44.000000000 +0000
++++ iozone3_373.haiku/src/current/fileop.c	2009-12-02 04:12:20.000000000 +0000
 @@ -116,7 +116,7 @@
  void file_read(int);
  void splash(void);
@@ -67,9 +67,9 @@ diff -Naur iozone3_326/src/current/fileop.c iozone3_326.haiku/src/current/fileop
  	      printf("Mkdir failed\n");
  	      exit(1);
  	  }
-diff -Naur iozone3_326/src/current/iozone.c iozone3_326.haiku/src/current/iozone.c
---- iozone3_326/src/current/iozone.c	2009-06-19 14:00:44.000000000 +0000
-+++ iozone3_326.haiku/src/current/iozone.c	2009-12-02 03:34:14.000000000 +0000
+diff -Naur iozone3_373/src/current/iozone.c iozone3_373.haiku/src/current/iozone.c
+--- iozone3_373/src/current/iozone.c	2009-06-19 14:00:44.000000000 +0000
++++ iozone3_373.haiku/src/current/iozone.c	2009-12-02 03:34:14.000000000 +0000
 @@ -57,7 +57,7 @@
  #include <Windows.h>
  int errno;
@@ -120,18 +120,18 @@ diff -Naur iozone3_326/src/current/iozone.c iozone3_326.haiku/src/current/iozone
  #define MAP_FILE (0)
  #endif
  
-diff -Naur iozone3_326/src/current/iozone_visualizer.pl iozone3_326.haiku/src/current/iozone_visualizer.pl
---- iozone3_326/src/current/iozone_visualizer.pl	2009-06-19 14:00:44.000000000 +0000
-+++ iozone3_326.haiku/src/current/iozone_visualizer.pl	2009-12-02 04:20:39.000000000 +0000
+diff -Naur iozone3_373/src/current/iozone_visualizer.pl iozone3_373.haiku/src/current/iozone_visualizer.pl
+--- iozone3_373/src/current/iozone_visualizer.pl	2009-06-19 14:00:44.000000000 +0000
++++ iozone3_373.haiku/src/current/iozone_visualizer.pl	2009-12-02 04:20:39.000000000 +0000
 @@ -1,4 +1,4 @@
 -#!/usr/bin/perl
 +#!/boot/common/bin/perl
  
  use warnings;
  use strict;
-diff -Naur iozone3_326/src/current/libbif.c iozone3_326.haiku/src/current/libbif.c
---- iozone3_326/src/current/libbif.c	2009-06-19 14:00:44.000000000 +0000
-+++ iozone3_326.haiku/src/current/libbif.c	2009-12-02 03:39:28.000000000 +0000
+diff -Naur iozone3_373/src/current/libbif.c iozone3_373.haiku/src/current/libbif.c
+--- iozone3_373/src/current/libbif.c	2009-06-19 14:00:44.000000000 +0000
++++ iozone3_373.haiku/src/current/libbif.c	2009-12-02 03:39:28.000000000 +0000
 @@ -14,7 +14,7 @@
  #include <sys/types.h>
  #include <stdio.h>
@@ -150,9 +150,9 @@ diff -Naur iozone3_326/src/current/libbif.c iozone3_326.haiku/src/current/libbif
  #include <unistd.h>
  #include <stdlib.h>
  #endif
-diff -Naur iozone3_326/src/current/makefile iozone3_326.haiku/src/current/makefile
---- iozone3_326/src/current/makefile	2009-06-19 14:00:44.000000000 +0000
-+++ iozone3_326.haiku/src/current/makefile	2009-12-02 04:25:28.000000000 +0000
+diff -Naur iozone3_373/src/current/makefile iozone3_373.haiku/src/current/makefile
+--- iozone3_373/src/current/makefile	2009-06-19 14:00:44.000000000 +0000
++++ iozone3_373.haiku/src/current/makefile	2009-12-02 04:25:28.000000000 +0000
 @@ -30,6 +30,7 @@
  	@echo "        ->   freebsd              (32bit)   <-"
  	@echo "        ->   generic              (32bit)   <-"
@@ -205,9 +205,9 @@ diff -Naur iozone3_326/src/current/makefile iozone3_326.haiku/src/current/makefi
  fileop_AIX.o:	fileop.c
  	@echo ""
  	@echo "Building fileop for AIX"
-diff -Naur iozone3_326/src/current/report.pl iozone3_326.haiku/src/current/report.pl
---- iozone3_326/src/current/report.pl	2009-06-19 14:00:44.000000000 +0000
-+++ iozone3_326.haiku/src/current/report.pl	2009-12-02 04:21:50.000000000 +0000
+diff -Naur iozone3_373/src/current/report.pl iozone3_373.haiku/src/current/report.pl
+--- iozone3_373/src/current/report.pl	2009-06-19 14:00:44.000000000 +0000
++++ iozone3_373.haiku/src/current/report.pl	2009-12-02 04:21:50.000000000 +0000
 @@ -1,4 +1,4 @@
 -#!/usr/bin/perl
 +#!/boot/common/bin/perl
