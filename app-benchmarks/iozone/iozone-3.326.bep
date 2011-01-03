@@ -12,7 +12,8 @@ BUILD {
 
 INSTALL {
 	cd iozone3_326/src/current/
-    make install DESTDIR=${DESTDIR}
+    install -v iozone /boot/common/bin
+    install -v fileop /boot/common/bin
 }
 LICENSE="iozone"
 COPYRIGHT="1991-2001, William D. Norcott; 2010, Don Capps"
