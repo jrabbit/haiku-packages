@@ -1,2 +1,0 @@
-http://downloads.sourceforge.net/project/pydispatcher/pydispatcher/2.0.1/PyDispatcher-2.0.1.tar.gz
-http://downloads.sourceforge.net/project/simpleparse/simpleparse/2.1.1a2/SimpleParse-2.1.1a2.tar.gz
