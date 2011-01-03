@@ -12,7 +12,7 @@ GCC2:
 
 *  ha - works
 *  lha - works
-*  bash - 
-*  iozone -
-*  bonnie++ -
+*  bash - works
+*  iozone - waiting for old rev
+*  bonnie++ - works
 *  enchant -
