@@ -13,6 +13,16 @@ GCC2:
 *  ha - works
 *  lha - works
 *  bash - works
-*  iozone - waiting for old rev - Unknown
+*  iozone - fails to build.
 *  bonnie++ - works
-*  enchant - Unknown - failed bu could be because of gettext & glib being gcc4
+*  enchant - Unknown - failed but could be because of gettext & glib being gcc4
+
+commited:
+
+
+*  ha - yes
+*  lha - yes
+*  bash - no
+*  iozone - no
+*  bonnie++ - yes 
+*  enchant - no

@@ -12,8 +12,10 @@ BUILD {
 
 INSTALL {
 	cd iozone3_326/src/current/
-    install -v iozone /boot/common/bin
-    install -v fileop /boot/common/bin
+    mkdir -p ${DESTDIR}/`finddir B_COMMON_BIN_DIRECTORY`
+    cp iozone ${DESTDIR}/`finddir B_COMMON_BIN_DIRECTORY`/iozone
+    cp fileop ${DESTDIR}/`finddir B_COMMON_BIN_DIRECTORY`/fileop
 }
 LICENSE="iozone"
-COPYRIGHT="1991-2001, William D. Norcott; 2010, Don Capps"
+COPYRIGHT="1991-2001, William D. Norcott
+    2010, Don Capps"
