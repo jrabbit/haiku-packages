@@ -13,16 +13,16 @@ GCC2:
 *  ha - works
 *  lha - works
 *  bash - works
-*  iozone - fails to build.
+*  iozone - patched.
 *  bonnie++ - works
-*  enchant - Unknown - failed but could be because of gettext & glib being gcc4
+*  enchant - works according to phoudoin
 
 commited:
 
 
 *  ha - yes
 *  lha - yes
-*  bash - no
-*  iozone - no
+*  bash - yes
+*  iozone - yes
 *  bonnie++ - yes 
-*  enchant - no
+*  enchant - yes
