@@ -15,5 +15,6 @@ INSTALL {
     cd bash-4.1
     make install DESTDIR=${DESTDIR}
 }
+MESSAGE="Bash does not compile as is on GCC2. Sorry. Patches from Haiku may fix this eventually."
 LICENSE="GNU GPL v3"
 COPYRIGHT="1989, Brian Fox; 2010, Chet Ramey"

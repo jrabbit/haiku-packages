@@ -1,6 +1,6 @@
 diff -Naur iozone3_326/src/current/fileop.c iozone3_326.haiku/src/current/fileop.c
---- iozone3_326/src/current/fileop.c	2009-06-19 14:00:44.000000000 +0000
-+++ iozone3_326.haiku/src/current/fileop.c	2009-12-02 04:12:20.000000000 +0000
+--- iozone3_326/src/current/fileop.c	2009-06-19 09:00:44.000000000 -0500
++++ iozone3_326.haiku/src/current/fileop.c	2011-01-06 08:22:28.000000000 -0600
 @@ -116,7 +116,7 @@
  void file_read(int);
  void splash(void);
@@ -10,7 +10,25 @@ diff -Naur iozone3_326/src/current/fileop.c iozone3_326.haiku/src/current/fileop
  void clear_stats();
  int validate(char *, int , char );
  
-@@ -242,7 +242,7 @@
+@@ -138,14 +138,15 @@
+ /************************************************************************/
+ void purge_buffer_cache()
+ {
+-	if (!mountname)
+-		return;
++
+ 
+ 	char cwd[PATH_MAX];
+ 	char command[1024];
+ 	int ret,i;
+ 
+ 	getcwd(cwd, sizeof(cwd));
++	if (!mountname)
++		return;
+ 	chdir("/");
+ 	strcpy(command,"umount ");
+ 	strcat(command, mountname);
+@@ -242,7 +243,7 @@
  	  printf("\nFileop:  Working in %s, File size is %d,  Output is in Ops/sec. (A=Avg, B=Best, W=Worst)\n", thedir, sz);
  	if(!verbose)
  	{
@@ -19,7 +37,7 @@ diff -Naur iozone3_326/src/current/fileop.c iozone3_326.haiku/src/current/fileop
  	   	printf(" .     %7s %7s %7s %7s %7s %7s %7s %7s %7s %7s %7s %7s %7s %10s\n",
         	   	"mkdir","chdir","rmdir","create","open","read","write","close","stat",
  		"access","chmod","readdir","delete"," Total_files");
-@@ -450,7 +450,7 @@
+@@ -450,7 +451,7 @@
  	      printf("         Worst readdir(s)/sec = %12.2f (%12.9f seconds/op)\n\n",
  			1/stats[_STAT_READDIR].worst,stats[_STAT_READDIR].worst);
  	   }
@@ -28,7 +46,7 @@ diff -Naur iozone3_326/src/current/fileop.c iozone3_326.haiku/src/current/fileop
  	   /*
  	    * link test 
  	    */
-@@ -517,7 +517,7 @@
+@@ -517,7 +518,7 @@
  	         printf("%7.0f ",stats[_STAT_ACCESS].counter/stats[_STAT_ACCESS].total_time);
  	         printf("%7.0f ",stats[_STAT_CHMOD].counter/stats[_STAT_CHMOD].total_time);
  	         printf("%7.0f ",stats[_STAT_READDIR].counter/stats[_STAT_READDIR].total_time);
@@ -37,7 +55,7 @@ diff -Naur iozone3_326/src/current/fileop.c iozone3_326.haiku/src/current/fileop
  	         printf("%7.0f ",stats[_STAT_LINK].counter/stats[_STAT_LINK].total_time);
  	         printf("%7.0f ",stats[_STAT_UNLINK].counter/stats[_STAT_UNLINK].total_time);
  #endif
-@@ -540,7 +540,7 @@
+@@ -540,7 +541,7 @@
  	         printf("%7.0f ",1/stats[_STAT_ACCESS].best);
  	         printf("%7.0f ",1/stats[_STAT_CHMOD].best);
  	         printf("%7.0f ",1/stats[_STAT_READDIR].best);
@@ -46,7 +64,7 @@ diff -Naur iozone3_326/src/current/fileop.c iozone3_326.haiku/src/current/fileop
  	         printf("%7.0f ",1/stats[_STAT_LINK].best);
  	         printf("%7.0f ",1/stats[_STAT_UNLINK].best);
  #endif
-@@ -563,7 +563,7 @@
+@@ -563,7 +564,7 @@
  	         printf("%7.0f ",1/stats[_STAT_ACCESS].worst);
  	         printf("%7.0f ",1/stats[_STAT_CHMOD].worst);
  	         printf("%7.0f ",1/stats[_STAT_READDIR].worst);
@@ -55,7 +73,7 @@ diff -Naur iozone3_326/src/current/fileop.c iozone3_326.haiku/src/current/fileop
  	         printf("%7.0f ",1/stats[_STAT_LINK].worst);
  	         printf("%7.0f ",1/stats[_STAT_UNLINK].worst);
  #endif
-@@ -589,9 +589,10 @@
+@@ -589,9 +590,10 @@
  	{
  	  sprintf(buf,"fileop_L1_%d",i);
  	  stats[_STAT_DIR_CREATE].starttime=time_so_far();
@@ -68,8 +86,8 @@ diff -Naur iozone3_326/src/current/fileop.c iozone3_326.haiku/src/current/fileop
  	      exit(1);
  	  }
 diff -Naur iozone3_326/src/current/iozone.c iozone3_326.haiku/src/current/iozone.c
---- iozone3_326/src/current/iozone.c	2009-06-19 14:00:44.000000000 +0000
-+++ iozone3_326.haiku/src/current/iozone.c	2009-12-02 03:34:14.000000000 +0000
+--- iozone3_326/src/current/iozone.c	2009-06-19 09:00:44.000000000 -0500
++++ iozone3_326.haiku/src/current/iozone.c	2011-01-06 08:20:02.000000000 -0600
 @@ -57,7 +57,7 @@
  #include <Windows.h>
  int errno;
@@ -121,8 +139,8 @@ diff -Naur iozone3_326/src/current/iozone.c iozone3_326.haiku/src/current/iozone
  #endif
  
 diff -Naur iozone3_326/src/current/iozone_visualizer.pl iozone3_326.haiku/src/current/iozone_visualizer.pl
---- iozone3_326/src/current/iozone_visualizer.pl	2009-06-19 14:00:44.000000000 +0000
-+++ iozone3_326.haiku/src/current/iozone_visualizer.pl	2009-12-02 04:20:39.000000000 +0000
+--- iozone3_326/src/current/iozone_visualizer.pl	2009-06-19 09:00:44.000000000 -0500
++++ iozone3_326.haiku/src/current/iozone_visualizer.pl	2011-01-06 08:20:02.000000000 -0600
 @@ -1,4 +1,4 @@
 -#!/usr/bin/perl
 +#!/boot/common/bin/perl
@@ -130,8 +148,8 @@ diff -Naur iozone3_326/src/current/iozone_visualizer.pl iozone3_326.haiku/src/cu
  use warnings;
  use strict;
 diff -Naur iozone3_326/src/current/libbif.c iozone3_326.haiku/src/current/libbif.c
---- iozone3_326/src/current/libbif.c	2009-06-19 14:00:44.000000000 +0000
-+++ iozone3_326.haiku/src/current/libbif.c	2009-12-02 03:39:28.000000000 +0000
+--- iozone3_326/src/current/libbif.c	2009-06-19 09:00:44.000000000 -0500
++++ iozone3_326.haiku/src/current/libbif.c	2011-01-06 08:20:02.000000000 -0600
 @@ -14,7 +14,7 @@
  #include <sys/types.h>
  #include <stdio.h>
@@ -151,8 +169,8 @@ diff -Naur iozone3_326/src/current/libbif.c iozone3_326.haiku/src/current/libbif
  #include <stdlib.h>
  #endif
 diff -Naur iozone3_326/src/current/makefile iozone3_326.haiku/src/current/makefile
---- iozone3_326/src/current/makefile	2009-06-19 14:00:44.000000000 +0000
-+++ iozone3_326.haiku/src/current/makefile	2009-12-02 04:25:28.000000000 +0000
+--- iozone3_326/src/current/makefile	2009-06-19 09:00:44.000000000 -0500
++++ iozone3_326.haiku/src/current/makefile	2011-01-06 08:20:02.000000000 -0600
 @@ -30,6 +30,7 @@
  	@echo "        ->   freebsd              (32bit)   <-"
  	@echo "        ->   generic              (32bit)   <-"
@@ -206,8 +224,8 @@ diff -Naur iozone3_326/src/current/makefile iozone3_326.haiku/src/current/makefi
  	@echo ""
  	@echo "Building fileop for AIX"
 diff -Naur iozone3_326/src/current/report.pl iozone3_326.haiku/src/current/report.pl
---- iozone3_326/src/current/report.pl	2009-06-19 14:00:44.000000000 +0000
-+++ iozone3_326.haiku/src/current/report.pl	2009-12-02 04:21:50.000000000 +0000
+--- iozone3_326/src/current/report.pl	2009-06-19 09:00:44.000000000 -0500
++++ iozone3_326.haiku/src/current/report.pl	2011-01-06 08:20:02.000000000 -0600
 @@ -1,4 +1,4 @@
 -#!/usr/bin/perl
 +#!/boot/common/bin/perl

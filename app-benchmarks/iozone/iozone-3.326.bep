@@ -7,9 +7,8 @@ STATUS_HAIKU="stable"
 DEPEND=""
 BUILD {
 	cd iozone3_326/src/current/
-	CFLAGS='-std=c99' make haiku
+	make haiku
 }
-
 INSTALL {
 	cd iozone3_326/src/current/
     mkdir -p ${DESTDIR}/`finddir B_COMMON_BIN_DIRECTORY`
