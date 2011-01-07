@@ -11,8 +11,11 @@ BUILD {
 }
 INSTALL {
         cd pycrypto-2.3
-        python setup.py install --root=${DESTDIR}
-
+        if [ -n "${DESTDIR}" ];then
+            python setup.py install --root=${DESTDIR}
+        else
+            python setup.py install --prefix="/boot/common"
+        fi
 }
 LICENSE="pycrypto"
 COPYRIGHT="2010 Dwayne C. Litzenberger"
