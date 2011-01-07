@@ -11,7 +11,11 @@ BUILD {
 }
 INSTALL {
         cd paramiko-1.7.6
-        python setup.py install --root ${DESTDIR}
+        if [ -n "${DESTDIR}" ];then
+            python setup.py install --root=${DESTDIR}
+        else
+            python setup.py install --prefix="/boot/common"
+        fi
 
 }
 LICENSE="GNU LGPL v2.1"
