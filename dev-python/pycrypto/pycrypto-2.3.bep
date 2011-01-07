@@ -14,5 +14,5 @@ INSTALL {
         python setup.py install --root=${DESTDIR}
 
 }
-LICENSE="Public Domain"
+LICENSE="pycrypto"
 COPYRIGHT="2010 Dwayne C. Litzenberger"
